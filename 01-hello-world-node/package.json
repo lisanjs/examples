@@ -1,0 +1,19 @@
+{
+  "name": "01-hello-world-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lisan compile && node index.js",
+    "lisan:compile": "lisan compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lisan": "0.0.34"
+  },
+  "devDependencies": {
+    "lisan-cli": "0.0.34"
+  }
+}

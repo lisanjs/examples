@@ -1,0 +1,8 @@
+{
+  "locale": "tr",
+  "entries": {
+    "hello.world": "Merhaba Dünya",
+    "node.version": "Node versiyonunuz ${version}!",
+    "done.message": "Tamamlandı! Hoşçakalın..."
+  }
+}

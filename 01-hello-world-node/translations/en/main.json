@@ -1,0 +1,8 @@
+{
+  "locale": "en",
+  "entries": {
+    "hello.world": "Hello World",
+    "node.version": "Your node version is ${version}!",
+    "done.message": "Done! Bye.."
+  }
+}
