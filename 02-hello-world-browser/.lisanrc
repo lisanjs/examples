@@ -1,15 +1,6 @@
 {
   "compile": {
-    // lisan-compiler options
-    "module": "lisan", // none, cjs, esm, lisan
-    "allowNonExistingKeys": false,
-    "autoTrimValues": true,
-    "sortEntryKeys": true,
-
-    // command options
-    "target": "es6",
     "inputDir": "translations",
-    "exclude": [],
     "outputDir": ".lisan_out/dictionaries"
   }
 }
