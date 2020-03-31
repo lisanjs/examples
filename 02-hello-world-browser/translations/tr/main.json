@@ -1,0 +1,7 @@
+{
+  "locale": "tr",
+  "entries": {
+    "hello.world": "Merhaba Dünya",
+    "hello.name": "Merhaba ${name}!"
+  }
+}

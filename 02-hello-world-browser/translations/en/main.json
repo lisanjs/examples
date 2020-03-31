@@ -1,0 +1,7 @@
+{
+  "locale": "en",
+  "entries": {
+    "hello.world": "Hello World",
+    "hello.name": "Hello ${name}!"
+  }
+}

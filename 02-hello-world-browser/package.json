@@ -1,0 +1,21 @@
+{
+  "name": "01-hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "lisan compile && http-server .",
+    "lisan:compile": "lisan compile"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "lisan-cli": "0.0.34",
+    "http-server": "0.12.1"
+  },
+  "dependencies": {
+    "lisan": "0.0.34",
+    "lisan-plugin-loader": "0.0.34"
+  }
+}

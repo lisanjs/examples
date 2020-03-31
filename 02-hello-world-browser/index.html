@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LisanJS Example</title>
+  </head>
+  <body>
+    <select id="languages">
+      <option value="en">en</option>
+      <option value="tr">tr</option>
+    </select>
+    <div id="content1"></div>
+    <div id="content2"></div>
+    <script src="./node_modules/lisan/dist/index.umd.js"></script>
+    <script src="./node_modules/lisan-plugin-loader/dist/index.umd.js"></script>
+    <script type="text/javascript">
+      (async function() {
+        "use strict";
+        const { lisan } = window.lisanJS;
+        const { Loader } = window.lisanPluginLoader;
+
+        lisan.use(
+          Loader({
+            dictionaryUrlFn: (dictName, localeName) => {
+              return `.lisan_out/dictionaries/${localeName}/${dictName}.js`;
+            }
+          })
+        );
+
+        const content1 = document.getElementById("content1");
+        const content2 = document.getElementById("content2");
+        const languages = document.getElementById("languages");
+
+        const render = async () => {
+          lisan.localeName(languages.value);
+
+          await lisan.load("main");
+
+          content1.innerHTML = lisan.t("hello.world");
+          content2.innerHTML = lisan.t("hello.name", { name: "John" });
+        };
+
+        languages.addEventListener("change", async () => {
+          await render();
+        });
+
+        languages.value = "tr";
+        await render();
+      })().then(() => console.log("ready"));
+    </script>
+  </body>
+</html>
