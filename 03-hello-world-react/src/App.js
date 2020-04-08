@@ -1,24 +1,65 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { lisan, t } from "lisan";
 import logo from "./logo.svg";
 import "./App.css";
 
-console.log("");
+const Loading = (
+  <div style={{ textAlign: "center", marginTop: "10px" }}>{"Loading..."}</div>
+);
 
 function App() {
+  const [loaded, setLoaded] = useState(false);
+  const [language, setLanguage] = useState("en");
+
+  const updateLanguage = (lang) => {
+    lisan.reset();
+    lisan.localeName(lang);
+
+    import(`../public/dictionaries/${lang}/main`).then((dict) => {
+      lisan.add(dict);
+      setLoaded(true);
+      setLanguage(lang);
+    });
+  };
+
+  const handleChange = (event) => {
+    updateLanguage(event.target.value);
+  };
+
+  useEffect(() => {
+    updateLanguage(language);
+  }, []);
+
+  if (!loaded) {
+    return Loading;
+  }
+
+  const editMessage = t("edit.message", {
+    codeElement: "<code>src/App.js</code>",
+  });
+
+  console.log("message", editMessage);
+
   return (
     <div className="App">
       <header className="App-header">
+        <select value={language} onChange={handleChange}>
+          <option value="en">English</option>
+          <option value="tr">Türkçe</option>
+        </select>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: editMessage,
+          }}
+        />
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://lisanjs.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          {t("learn.lisan")}
         </a>
       </header>
     </div>
