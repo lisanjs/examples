@@ -3,7 +3,11 @@ const { getUserInput } = require("./getUserInput");
 
 const languages = { 1: "tr", 2: "en" };
 
-getUserInput("1 - Türkçe, 2 - English: ", no => {
+const latestVersion = 12;
+const userVersion = process.version;
+isNodeLatest = userVersion.indexOf(`v${latestVersion}`) === 0 ? 1 : 0;
+
+getUserInput("1 - Türkçe, 2 - English: ", (no) => {
   // 1. Detect Language
   const lang = languages[no] || "tr";
 
@@ -15,6 +19,8 @@ getUserInput("1 - Türkçe, 2 - English: ", no => {
 
   // 4. All keys ready to use
   console.log(t("hello.world"));
-  console.log(t("node.version", { version: process.version }));
+  console.log(
+    t("node.version", { version: userVersion, latestVersion, isNodeLatest })
+  );
   console.log(t("done.message"));
 });
