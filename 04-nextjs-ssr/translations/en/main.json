@@ -1,0 +1,18 @@
+{
+  "locale": "en",
+  "entries": {
+    "text.loading": "Loading...",
+    "document.title": "Create Lisan App",
+    "page.title": "Welcome to <a href=\"https://lisanjs.com\">LisanJS!</a>",
+    "page.description": " Get started by editing <code>pages/index.js</code>",
+    "section.documentation.title": "Documentation",
+    "section.documentation.desc": "Find out more about technical details and best practices.",
+    "section.translations.title": "Lisan Literal",
+    "section.translations.desc": "See full capabilities of Lisan Literal",
+    "section.examples.title": "Examples",
+    "section.examples.desc": "Explore many different use cases of Lisan.",
+    "section.try_compiler.title": "Try Online Compiler",
+    "section.try_compiler.desc": "You can test capabilities of lisan-compiler online.",
+    "powered.by": "Powered by ${logoImgElement}"
+  }
+}
