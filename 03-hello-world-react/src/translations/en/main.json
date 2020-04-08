@@ -1,0 +1,7 @@
+{
+  "locale": "en",
+  "entries": {
+    "edit.message": "Edit ${codeElement} and save to reload.",
+    "learn.lisan": "Learn LisanJS"
+  }
+}

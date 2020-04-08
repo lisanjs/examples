@@ -1,0 +1,7 @@
+{
+  "locale": "tr",
+  "entries": {
+    "edit.message": "Yenilemek için, ${codeElement} dosyasını değiştirip kaydedin.",
+    "learn.lisan": "LisanJS Öğren"
+  }
+}
