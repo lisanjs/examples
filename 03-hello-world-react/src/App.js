@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     updateLanguage(language);
-  }, []);
+  }, [language]);
 
   if (!loaded) {
     return Loading;
