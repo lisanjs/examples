@@ -11,6 +11,9 @@
 # production
 /build
 
+# translations
+/public/dictionaries
+
 # misc
 .DS_Store
 .env.local
