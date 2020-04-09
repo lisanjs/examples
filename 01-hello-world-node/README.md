@@ -2,8 +2,8 @@
 
 ## Goal
 
-Purpose of this example to demonstrate minimal requirements
-to use lisan.
+Purpose of this example to demonstrate a minimal setup
+to use [LisanJS](https://lisanjs.com).
 
 ## Instructions
 
