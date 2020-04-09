@@ -1,0 +1,7 @@
+{
+  "compile": {
+    "inputDir": "translations/",
+    "outputDir": "public/dictionaries/",
+    "returnArray": true
+  }
+}

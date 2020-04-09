@@ -1,0 +1,18 @@
+{
+  "locale": "tr",
+  "entries": {
+    "text.loading": "Yükleniyor...",
+    "document.title": "Lisan Uygulaması Oluştur",
+    "page.title": "${linkElement}'e Hoşgeldiniz!",
+    "page.description": "Kodlamaya ${codeElement} dosyasından başlayabilirsiniz.",
+    "section.documentation.title": "Dökümantasyon",
+    "section.documentation.desc": "Teknik detaylara ve kullanım tavsiyelerine ulaşın.",
+    "section.translations.title": "Lisan Literal",
+    "section.translations.desc": "Lisan Literal hakkında daha fazla bilgi edinin.",
+    "section.examples.title": "Örnekler",
+    "section.examples.desc": "Lisan kullanılarak oluşturulmuş örnekleri inceleyin.",
+    "section.try_compiler.title": "Online Compiler",
+    "section.try_compiler.desc": "Lisan'ın yeteneklerini online olarak test edebilirsiniz.",
+    "powered.by": "${logoImgElement} ile hazırlanmıştır :)"
+  }
+}
