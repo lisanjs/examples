@@ -35,7 +35,7 @@ function App() {
   }
 
   const editMessage = t("edit.message", {
-    codeElement: "<code>src/App.js</code>",
+    codeElement: <code>src/App.js</code>,
   });
 
   console.log("message", editMessage);
@@ -48,11 +48,7 @@ function App() {
           <option value="tr">Türkçe</option>
         </select>
         <img src={logo} className="App-logo" alt="logo" />
-        <p
-          dangerouslySetInnerHTML={{
-            __html: editMessage,
-          }}
-        />
+        <p>{editMessage}</p>
         <a
           className="App-link"
           href="https://lisanjs.com"
