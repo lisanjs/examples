@@ -82,7 +82,7 @@ module.exports = { getUserInput };
 ### 4. Create Translation files
 
 ```bash
-touch translations/en/main.json
+mkdir -p translations/en/ && touch translations/en/main.json
 ```
 
 ```json
@@ -97,7 +97,7 @@ touch translations/en/main.json
 ```
 
 ```bash
-touch translations/tr/main.json
+mkdir -p translations/tr/ && touch translations/tr/main.json
 ```
 
 ```json
