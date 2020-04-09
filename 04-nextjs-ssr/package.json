@@ -9,12 +9,12 @@
     "start": "next start"
   },
   "dependencies": {
-    "lisan": "0.0.38",
+    "lisan": "0.0.40",
     "next": "9.3.4",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   },
   "devDependencies": {
-    "lisan-cli": "0.0.38"
+    "lisan-cli": "0.0.40"
   }
 }

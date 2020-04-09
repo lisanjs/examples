@@ -37,15 +37,15 @@ const Home = () => {
       </Head>
 
       <main>
-        <h1
-          className="title"
-          dangerouslySetInnerHTML={{ __html: t("page.title") }}
-        />
+        <h1 className="title">
+          {t("page.title", {
+            linkElement: <a href="https://lisanjs.com">LisanJS!</a>,
+          })}
+        </h1>
 
-        <p
-          className="description"
-          dangerouslySetInnerHTML={{ __html: t("page.description") }}
-        />
+        <p className="description">
+          {t("page.description", { codeElement: <code>pages/index.js</code> })}
+        </p>
 
         <div>
           <select value={language} onChange={handleChange}>
@@ -78,17 +78,13 @@ const Home = () => {
       </main>
 
       <footer>
-        <a
-          href="https://lisanjs.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          dangerouslySetInnerHTML={{
-            __html: t("powered.by", {
-              logoImgElement:
-                '<img src="/lisan.png" alt="Lisan" height="40px" align="center"/>',
-            }),
-          }}
-        />
+        <a href="https://lisanjs.com" target="_blank" rel="noopener noreferrer">
+          {t("powered.by", {
+            logoImgElement: (
+              <img src="/lisan.png" alt="Lisan" height="40px" align="center" />
+            ),
+          })}
+        </a>
       </footer>
 
       <style jsx>{`

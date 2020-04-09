@@ -3,8 +3,8 @@
   "entries": {
     "text.loading": "Yükleniyor...",
     "document.title": "Lisan Uygulaması Oluştur",
-    "page.title": "<a href=\"https://lisanjs.com\">LisanJS</a>'e Hoşgeldiniz!",
-    "page.description": "Kodlamaya <code>pages/index.js</code> dosyasından başlayabilirsiniz.",
+    "page.title": "${linkElement}'e Hoşgeldiniz!",
+    "page.description": "Kodlamaya ${codeElement} dosyasından başlayabilirsiniz.",
     "section.documentation.title": "Dökümantasyon",
     "section.documentation.desc": "Teknik detaylara ve kullanım tavsiyelerine ulaşın.",
     "section.translations.title": "Lisan Literal",

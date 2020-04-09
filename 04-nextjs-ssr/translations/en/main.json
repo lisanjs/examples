@@ -3,8 +3,8 @@
   "entries": {
     "text.loading": "Loading...",
     "document.title": "Create Lisan App",
-    "page.title": "Welcome to <a href=\"https://lisanjs.com\">LisanJS!</a>",
-    "page.description": " Get started by editing <code>pages/index.js</code>",
+    "page.title": "Welcome to ${linkElement}",
+    "page.description": " Get started by editing ${codeElement}",
     "section.documentation.title": "Documentation",
     "section.documentation.desc": "Find out more about technical details and best practices.",
     "section.translations.title": "Lisan Literal",
