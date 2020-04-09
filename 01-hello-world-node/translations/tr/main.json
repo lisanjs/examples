@@ -1,12 +1,12 @@
 {
   "locale": "tr",
   "entries": {
-    "hello.world": "Merhaba Dünya",
+    "hello.name": "Merhaba ${username}",
     "is.node.latest": {
-      "zero": "Eski bir node.js sürümü kullanıyorsunuz!, En güncel sürüm: ${latestVersion}.",
+      "zero": "Eski bir node.js sürümü kullanıyorsunuz! En güncel sürüm: ${latestVersion}.",
       "one": "Tebrikler, En güncel node.js sürümünü kullanıyorsunuz."
     },
     "node.version": "Sizin node.js sürümünüz: ${version}! ${c('is.node.latest', isNodeLatest, {latestVersion})}",
-    "done.message": "Tamamlandı! Hoşçakalın..."
+    "bye.message": "Hoşçakalın..."
   }
 }

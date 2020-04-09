@@ -1,12 +1,12 @@
 {
   "locale": "en",
   "entries": {
-    "hello.world": "Hello World",
+    "hello.name": "Hello ${username}",
     "is.node.latest": {
-      "zero": "Seems like your node.js version is outdated!, Latest version is: ${latestVersion}.",
+      "zero": "Seems like your node.js version is outdated! Latest version is: ${latestVersion}.",
       "one": "Congratulations, you are using the latest node.js version."
     },
-    "node.version": "Your node.js version is ${version}!, ${c('is.node.latest', isNodeLatest, {latestVersion})}",
-    "done.message": "Done! Bye.."
+    "node.version": "Your node.js version is ${version}! ${c('is.node.latest', isNodeLatest, {latestVersion})}",
+    "bye.message": "Bye.."
   }
 }

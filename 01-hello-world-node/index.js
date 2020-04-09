@@ -1,11 +1,13 @@
 const { lisan, t } = require("lisan");
 const { getUserInput } = require("./getUserInput");
 
-const languages = { 1: "tr", 2: "en" };
+const username = require("os").userInfo().username;
+const userVersion = process.version;
 
 const latestVersion = 12;
-const userVersion = process.version;
-isNodeLatest = userVersion.indexOf(`v${latestVersion}`) === 0 ? 1 : 0;
+const isNodeLatest = userVersion.indexOf(`v${latestVersion}`) === 0 ? 1 : 0;
+
+const languages = { 1: "tr", 2: "en" };
 
 getUserInput("1 - Türkçe, 2 - English: ", (no) => {
   // 1. Detect Language
@@ -18,13 +20,9 @@ getUserInput("1 - Türkçe, 2 - English: ", (no) => {
   lisan.add(mainDict);
 
   // 4. All keys ready to use
-  console.log(t("hello.world"));
+  console.log(t("hello.name", { username }));
   console.log(
-    t("node.version", {
-      version: userVersion,
-      latestVersion,
-      isNodeLatest,
-    })
+    t("node.version", { version: userVersion, isNodeLatest, latestVersion })
   );
-  console.log(t("done.message"));
+  console.log(t("bye.message"));
 });
