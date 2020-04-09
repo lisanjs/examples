@@ -27,7 +27,14 @@ npm run dev
 
 If everything works fine, continue as below.
 
-1.1. Add scripts to `package.json`:
+1.1. Install Lisan:
+
+```bash
+npm install lisan
+npm install lisan-cli --save-dev
+```
+
+1.2. Add scripts to `package.json`:
 
 ```jsonc
 {
@@ -39,7 +46,7 @@ If everything works fine, continue as below.
 }
 ```
 
-1.2. Add dictionaries to `.gitignore` (Optional)
+1.3. Add dictionaries to `.gitignore` (Optional)
 
 ```text
 node_modules/
