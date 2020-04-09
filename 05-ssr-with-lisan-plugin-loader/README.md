@@ -3,7 +3,7 @@ with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/cr
 
 # Hello World (Next.js + Lisan Loader Plugin)
 
-## Note for the developer
+**A Small Tip:**
 
 Lisan Loader Plugin is meant for pure javascript projects.
 
