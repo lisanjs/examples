@@ -1,68 +1,100 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Hello World (React)
 
-In the project directory, you can run:
+## Goal
 
-### `npm start`
+Purpose of this example to demonstrate a minimal setup
+to use [LisanJS](https://lisanjs.com) with [ReactJS](https://reactjs.org).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Instructions
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### 1. Init project
 
-### `npm test`
+```bash
+npx create-react-app 03-hello-world-react
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd ./03-hello-world-react
 
-### `npm run build`
+touch .lisanrc
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First run the application to see if everything works fine:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```bash
+npm run dev
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+If everything works fine, continue as below.
 
-### `npm run eject`
+1.1. Add scripts to `package.json`:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```jsonc
+{
+  // ...
+  "scripts": {
+    "lisan:compile": "lisan compile"
+    // ..rest of the scripts
+  }
+}
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1.2. Add dictionaries to `.gitignore` (Optional)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```text
+node_modules/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+public/dictionaries/
+```
 
-## Learn More
+### 2. Set Lisan config
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Update the `.lisanrc` config as below:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```json
+{
+  "compile": {
+    "inputDir": "src/translations",
+    "outputDir": "public/dictionaries",
+    "returnArray": true
+  }
+}
+```
 
-### Code Splitting
+> `returnArray` option makes dictionaries compatible with JSX.
+> Learn more at [JSX Interpolation](https://lisanjs.com/docs/jsx-interpolation)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### 3. Create translation files
 
-### Analyzing the Bundle Size
+```bash
+mkdir -p src/translations/en/ && touch src/translations/en/main.json
+mkdir -p src/translations/tr/ && touch src/translations/tr/main.json
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Migrate content from `./src/App.js` to `src/translations/en/main.json`.
 
-### Making a Progressive Web App
+```json
+{
+  "locale": "en",
+  "entries": {
+    "edit.message": "Edit ${codeElement} and save to reload.",
+    "learn.lisan": "Learn LisanJS"
+  }
+}
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### 4. Update the `./src/App.js`
 
-### Advanced Configuration
+You can see the differences done to App js from [here](https://github.com/lisanjs/examples/compare/10a53fe1c95953505e3b98dc7b98c2ca7d9a825c...master#diff-e04aae894b6a73814ff87c53ec4e42ce).
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+### 5. Run the app
 
-### Deployment
+To run lisan compiler in `watch` mode you can use `-w` flag.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+```bash
+npm run lisan:compile -- -w
+```
 
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```bash
+npm run dev
+```
