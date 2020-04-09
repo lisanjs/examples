@@ -20,7 +20,11 @@ getUserInput("1 - Türkçe, 2 - English: ", (no) => {
   // 4. All keys ready to use
   console.log(t("hello.world"));
   console.log(
-    t("node.version", { version: userVersion, latestVersion, isNodeLatest })
+    t("node.version", {
+      version: userVersion,
+      latestVersion,
+      isNodeLatest,
+    })
   );
   console.log(t("done.message"));
 });

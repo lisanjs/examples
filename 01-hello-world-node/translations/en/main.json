@@ -3,7 +3,7 @@
   "entries": {
     "hello.world": "Hello World",
     "is.node.latest": {
-      "zero": "Seems like your node.js version is outdated!, Latest version is: {latestVersion}.",
+      "zero": "Seems like your node.js version is outdated!, Latest version is: ${latestVersion}.",
       "one": "Congratulations, you are using the latest node.js version."
     },
     "node.version": "Your node.js version is ${version}!, ${c('is.node.latest', isNodeLatest, {latestVersion})}",
