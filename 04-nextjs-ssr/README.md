@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped
+with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
 # Hello World (Next.js)
 
@@ -101,9 +102,9 @@ Migrate content from `./pages/index.js` to `./translations/en/main.json`.
 }
 ```
 
-### 4. Update the `./src/App.js`
+### 4. Update the `./pages/index.js`
 
-You can see the differences done to App js from [here](https://github.com/lisanjs/examples/compare/9c6659e93b2320fe325423f022a63a6376bdb670...master#diff-5762631d6d770364d8a847b35d27c697).
+You can see the differences done to `./pages/index.js` from [here](https://github.com/lisanjs/examples/compare/9c6659e93b2320fe325423f022a63a6376bdb670...master#diff-5762631d6d770364d8a847b35d27c697).
 
 ### 5. Run the app
 

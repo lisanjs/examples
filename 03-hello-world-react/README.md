@@ -92,7 +92,7 @@ Migrate content from `./src/App.js` to `src/translations/en/main.json`.
 
 ### 4. Update the `./src/App.js`
 
-You can see the differences done to App js from [here](https://github.com/lisanjs/examples/compare/10a53fe1c95953505e3b98dc7b98c2ca7d9a825c...master#diff-e04aae894b6a73814ff87c53ec4e42ce).
+You can see the differences done to `./src/App.js` from [here](https://github.com/lisanjs/examples/compare/10a53fe1c95953505e3b98dc7b98c2ca7d9a825c...master#diff-e04aae894b6a73814ff87c53ec4e42ce).
 
 ### 5. Run the app
 

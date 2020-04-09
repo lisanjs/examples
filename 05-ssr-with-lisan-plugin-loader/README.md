@@ -1,30 +1,119 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped
+with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Hello World (Next.js + Lisan Loader Plugin)
 
-First, run the development server:
+## Goal
+
+Purpose of this example to demonstrate a minimal setup
+to use [LisanJS](https://lisanjs.com) with [lisan-plugin-loader](https://lisanjs.com/docs/lisan-plugin-loader) which is also compatible with server side rendering..
+
+## Instructions
+
+### 1. Init project
+
+```bash
+npm init next-app 04-nextjs-ssr
+
+cd ./04-nextjs-ssr
+
+touch .lisanrc
+```
+
+First run the application to see if everything works fine:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If everything works fine, continue as below.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+1.1. Install Lisan:
 
-## Learn More
+```bash
+npm install lisan lisan-plugin-loader
+npm install lisan-cli --save-dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+1.2. Add scripts to `package.json`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```jsonc
+{
+  // ...
+  "scripts": {
+    "lisan:compile": "lisan compile"
+    // ..rest of the scripts
+  }
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+1.3. Add dictionaries to `.gitignore` (Optional)
 
-## Deploy on ZEIT Now
+```text
+node_modules/
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+public/dictionaries/
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### 2. Set Lisan config
+
+Update the `.lisanrc` config as below:
+
+```json
+{
+  "compile": {
+    "inputDir": "translations",
+    "outputDir": "public/dictionaries",
+    "returnArray": true
+  }
+}
+```
+
+> `returnArray` option makes dictionaries compatible with JSX.
+> Learn more at [JSX Interpolation](https://lisanjs.com/docs/jsx-interpolation)
+
+### 3. Create translation files
+
+```bash
+mkdir -p translations/en/ && touch translations/en/main.json
+mkdir -p translations/tr/ && touch translations/tr/main.json
+```
+
+Migrate content from `./pages/index.js` to `./translations/en/main.json`.
+
+```json
+{
+  "locale": "en",
+  "entries": {
+    "text.loading": "Loading...",
+    "document.title": "Create Lisan App",
+    "page.title": "Welcome to ${linkElement}",
+    "page.description": " Get started by editing ${codeElement}",
+    "section.documentation.title": "Documentation",
+    "section.documentation.desc": "Find out more about technical details and best practices.",
+    "section.translations.title": "Lisan Literal",
+    "section.translations.desc": "See full capabilities of Lisan Literal",
+    "section.examples.title": "Examples",
+    "section.examples.desc": "Explore many different use cases of Lisan.",
+    "section.try_compiler.title": "Try Online Compiler",
+    "section.try_compiler.desc": "You can test capabilities of lisan-compiler online.",
+    "powered.by": "Powered by ${logoImgElement}"
+  }
+}
+```
+
+### 4. Update the `./pages/index.js`
+
+You can see `./pages/index.js` from [here](https://github.com/lisanjs/examples/blob/master/05-ssr-with-lisan-plugin-loader/pages/index.js).
+
+### 5. Run the app
+
+To run lisan compiler in `watch` mode you can use `-w` flag.
+
+```bash
+npm run lisan:compile -- -w
+```
+
+```bash
+npm run dev
+```

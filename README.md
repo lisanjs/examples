@@ -34,7 +34,7 @@ Here you can find some example projects developed by Lisan.
 4. [**Hello World (Next.js)**](https://github.com/lisanjs/examples/tree/master/04-nextjs-ssr) - Here you can
    learn how to use [LisanJS](https://lisanjs.com) with [NextJS](https://nextjs.org) to achieve server side rendering.
 5. [**Hello World (Next.js + Lisan Loader Plugin)**](https://github.com/lisanjs/examples/tree/master/05-ssr-lisan-plugin-loader) - When using next.js,
-   you can also use [lisan-plugin-loader](https://lisanjs.com) which is also compatible with server side rendering.
+   you can also use [lisan-plugin-loader](https://lisanjs.co/docs/lisan-plugin-loader) which is also compatible with server side rendering.
 
 More examples are on the way..
 
