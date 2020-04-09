@@ -3,6 +3,17 @@ with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/cr
 
 # Hello World (Next.js + Lisan Loader Plugin)
 
+## Note for the developer
+
+Lisan Loader Plugin is meant for pure javascript projects.
+
+When using a framework in your project like react, next.js or vue.js,
+we recommend you to take advantage of
+most recent EcmaScript features like [`dynamic import`](https://v8.dev/features/dynamic-import).
+
+To learn more see [**Hello World (Next.js)**](https://github.com/lisanjs/examples/tree/master/04-nextjs-ssr)
+example, where `dynamic import` was used.
+
 ## Goal
 
 Purpose of this example to demonstrate a minimal setup
