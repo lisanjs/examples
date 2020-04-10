@@ -155,7 +155,7 @@ const content2 = document.getElementById("content2");
 const languages = document.getElementById("languages");
 
 const render = async () => {
-  lisan.localeName(languages.value);
+  lisan.setLocaleName(languages.value);
 
   await lisan.load("main");
 
@@ -209,7 +209,7 @@ await render();
         const languages = document.getElementById("languages");
 
         const render = async () => {
-          lisan.localeName(languages.value);
+          lisan.setLocaleName(languages.value);
 
           await lisan.load("main");
 

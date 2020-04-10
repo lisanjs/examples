@@ -16,8 +16,8 @@ const Home = () => {
 
   const updateLanguage = (lang) => {
     setLoaded(false);
-    lisan.reset();
-    lisan.localeName(lang);
+
+    lisan.setLocaleName(lang);
     lisan.load("main").then(() => {
       setLoaded(true);
     });

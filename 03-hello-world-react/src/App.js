@@ -12,8 +12,7 @@ function App() {
   const [language, setLanguage] = useState("en");
 
   const updateLanguage = (lang) => {
-    lisan.reset();
-    lisan.localeName(lang);
+    lisan.setLocaleName(lang);
 
     import(`../public/dictionaries/${lang}/main`).then((dict) => {
       lisan.add(dict);

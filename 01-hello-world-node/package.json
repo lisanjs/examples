@@ -11,9 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lisan": "0.0.35"
+    "lisan": "0.1.1"
   },
   "devDependencies": {
-    "lisan-cli": "0.0.35"
+    "lisan-cli": "0.1.1"
   }
 }

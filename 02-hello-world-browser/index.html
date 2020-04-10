@@ -15,7 +15,7 @@
     <script src="./node_modules/lisan/dist/index.umd.js"></script>
     <script src="./node_modules/lisan-plugin-loader/dist/index.umd.js"></script>
     <script type="text/javascript">
-      (async function() {
+      (async function () {
         "use strict";
         const { lisan } = window.lisanJS;
         const { Loader } = window.lisanPluginLoader;
@@ -24,7 +24,7 @@
           Loader({
             dictionaryUrlFn: (dictName, localeName) => {
               return `.lisan_out/dictionaries/${localeName}/${dictName}.js`;
-            }
+            },
           })
         );
 
@@ -33,7 +33,7 @@
         const languages = document.getElementById("languages");
 
         const render = async () => {
-          lisan.localeName(languages.value);
+          lisan.setLocaleName(languages.value);
 
           await lisan.load("main");
 

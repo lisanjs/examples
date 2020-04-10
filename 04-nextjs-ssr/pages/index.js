@@ -8,8 +8,8 @@ const Home = () => {
 
   const updateLanguage = (lang) => {
     setLoaded(false);
-    lisan.reset();
-    lisan.localeName(lang);
+
+    lisan.setLocaleName(lang);
     return import(`../public/dictionaries/${lang}/main`).then((main) => {
       lisan.add(main);
       setLoaded(true);
