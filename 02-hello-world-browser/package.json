@@ -11,11 +11,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lisan-cli": "0.0.35",
+    "lisan-cli": "0.0.41",
     "http-server": "0.12.1"
   },
   "dependencies": {
-    "lisan": "0.0.35",
-    "lisan-plugin-loader": "0.0.35"
+    "lisan": "0.0.41",
+    "lisan-plugin-loader": "0.0.41"
   }
 }
